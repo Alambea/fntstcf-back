@@ -27,5 +27,8 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "no-implicit-coercion": "off",
+    "no-console": "error"
+  }
 }

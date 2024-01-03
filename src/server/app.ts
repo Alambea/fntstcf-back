@@ -3,7 +3,7 @@ import chalk from "chalk";
 import debugCreator from "debug";
 import express from "express";
 
-const debug = debugCreator("users:initialize");
+const debug = debugCreator("users:server:initialize");
 
 const app = express();
 

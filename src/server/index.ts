@@ -5,6 +5,7 @@ import {
   endpointNotFound,
   generalErrorHandler,
 } from "./middlewares/errors/errorsMiddlewares.js";
+import pingRouter from "./features/ping/router/pingRouter.js";
 
 const originProduction = process.env.ALLOW_ORIGIN_PRODUCTION!;
 const originLocal = process.env.ALLOW_ORIGIN_LOCAL!;
@@ -14,6 +15,8 @@ const corsOptions: CorsOptions = {
 
 app.use(morgan("dev"));
 app.use(cors(corsOptions));
+
+app.use("/", pingRouter);
 
 app.use(endpointNotFound);
 app.use(generalErrorHandler);

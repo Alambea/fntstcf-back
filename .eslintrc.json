@@ -21,6 +21,12 @@
           }
         ]
       }
+    },
+    {
+      "files": ["**/model/**/*.ts"],
+      "rules": {
+        "@typescript-eslint/naming-convention": ["off"]
+      }
     }
   ],
   "parserOptions": {

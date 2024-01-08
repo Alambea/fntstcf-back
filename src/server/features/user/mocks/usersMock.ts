@@ -1,10 +1,9 @@
 import { type UserWithoutId, type UserStructure } from "../../types";
 
-export const leanneMock: UserWithoutId = {
+export const leanneMock: Omit<UserWithoutId, "externalId"> = {
   name: "Leanne Graham",
   username: "Bret",
   email: "Sincere@april.biz",
-  externalId: "1",
   address: "Kulas Light, Apt. 556, Gwenborough, 92998-3874",
 };
 

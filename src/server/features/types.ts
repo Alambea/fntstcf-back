@@ -3,7 +3,7 @@ export interface UserStructure {
   name: string;
   username: string;
   email: string;
-  externalId: string;
+  externalId?: string;
   address: string;
 }
 

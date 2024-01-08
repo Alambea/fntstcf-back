@@ -1,4 +1,4 @@
-import { type UserStructure } from "../../types";
+import { type UserStructure, type UserWithoutId } from "../../types";
 import User from "../model/User.js";
 import { type UsersRepository } from "./types";
 
@@ -7,6 +7,12 @@ class UsersMongooseRepository implements UsersRepository {
     const users = await User.find();
 
     return users;
+  }
+
+  public async addUser(user: UserWithoutId): Promise<UserStructure> {
+    const newUser = await User.create({ ...user });
+
+    return newUser;
   }
 }
 

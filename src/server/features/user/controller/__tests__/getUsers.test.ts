@@ -17,11 +17,13 @@ describe("Given a  UsersController's class getUsers method", () => {
   const next: NextFunction = jest.fn();
 
   describe("When it receives a response", () => {
-    const usersRepository: UsersRepository = {
+    const usersRepository: Pick<UsersRepository, "getUsers"> = {
       getUsers: jest.fn().mockResolvedValue(usersMock),
     };
 
-    const usersController = new UsersController(usersRepository);
+    const usersController = new UsersController(
+      usersRepository as UsersRepository,
+    );
 
     test("Then it should call the received response's method status with 200", async () => {
       const expectedStatusCode = 200;
@@ -49,11 +51,13 @@ describe("Given a  UsersController's class getUsers method", () => {
         "Failed to get users",
       );
 
-      const usersRepository: UsersRepository = {
+      const usersRepository: Pick<UsersRepository, "getUsers"> = {
         getUsers: jest.fn().mockRejectedValue(rejectionError),
       };
 
-      const usersController = new UsersController(usersRepository);
+      const usersController = new UsersController(
+        usersRepository as UsersRepository,
+      );
 
       await usersController.getUsers(req as Request, res as Response, next);
 

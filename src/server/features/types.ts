@@ -6,3 +6,5 @@ export interface UserStructure {
   externalId: string;
   address: string;
 }
+
+export type UserWithoutId = Omit<UserStructure, "_id">;

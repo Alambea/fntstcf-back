@@ -1,8 +1,8 @@
 class CustomError extends Error {
   constructor(
     message: string,
-    readonly statusCode: number,
-    readonly publicMessage?: string,
+    public statusCode: number,
+    public publicMessage?: string,
   ) {
     super(message);
   }

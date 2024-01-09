@@ -17,6 +17,7 @@ const UserSchema = new Schema<UserStructure>({
   externalId: {
     type: String,
     required: false,
+    sparse: true,
     unique: true,
   },
   address: {

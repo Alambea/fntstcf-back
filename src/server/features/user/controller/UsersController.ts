@@ -18,7 +18,7 @@ class UsersController {
     } catch (error: unknown) {
       const customError = new CustomError(
         `Error in getting users: ${(error as Error).message}`,
-        400,
+        404,
         "Failed to get users",
       );
 
@@ -40,7 +40,7 @@ class UsersController {
     } catch (error: unknown) {
       const customError = new CustomError(
         `Error adding user: ${(error as Error).message}`,
-        400,
+        404,
         "Failed to add user",
       );
 

@@ -4,8 +4,8 @@ import "../index";
 
 describe("Given a PUT /users endpoint", () => {
   describe("When it receives a request with an user in the body with an adress as number", () => {
-    test("Then it should respond with a status 400 error 'adress must be a string'", async () => {
-      const expectedStatusCode = 400;
+    test("Then it should respond with a status 404 error 'adress must be a string'", async () => {
+      const expectedStatusCode = 404;
       const expectedErrorMessage = "address must be a string";
       const path = "/users";
       const userToAdd = {

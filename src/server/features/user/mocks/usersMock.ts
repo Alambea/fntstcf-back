@@ -4,15 +4,15 @@ export const leanneMock: Omit<UserWithoutId, "externalId"> = {
   name: "Leanne Graham",
   username: "Bret",
   email: "Sincere@april.biz",
-  address: "Kulas Light, Apt. 556, Gwenborough, 92998-3874",
+  address: "Gwenborough Kulas Light, Apt. 556, 92998-3874",
 };
 
-const ervinMock: UserWithoutId = {
+export const ervinMock: UserWithoutId = {
   name: "Ervin Howell",
   username: "Antonette",
   email: "Shanna@melissa.tv",
   externalId: "2",
-  address: "Victor Plains, Suite 879, Wisokyburgh, 90566-7771",
+  address: "Wisokyburgh Victor Plains, Suite 879, 90566-7771",
 };
 
 export const usersMock: UserStructure[] = [

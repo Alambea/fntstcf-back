@@ -1,3 +1,4 @@
+import { type FilterQuery, type QueryOptions } from "mongoose";
 import { type UserStructure, type UserWithoutId } from "../../types";
 import User from "../model/User.js";
 import { type UsersRepository } from "./types";
@@ -9,10 +10,27 @@ class UsersMongooseRepository implements UsersRepository {
     return users;
   }
 
-  public async addUser(user: UserWithoutId): Promise<UserStructure> {
-    const newUser = await User.create({ ...user });
+  public async addUser(
+    user: UserStructure | UserWithoutId,
+  ): Promise<UserStructure> {
+    const newUser = await User.create(user);
 
     return newUser;
+  }
+
+  public async updateUser(user: UserWithoutId): Promise<UserStructure | void> {
+    const filter: FilterQuery<any> = {
+      externalId: user.externalId,
+    };
+    const options: QueryOptions = {
+      returnDocument: "after",
+    };
+
+    const updatedUser = await User.findOneAndUpdate(filter, user, options);
+
+    if (updatedUser) {
+      return updatedUser;
+    }
   }
 }
 

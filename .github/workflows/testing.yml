@@ -19,3 +19,4 @@ jobs:
         env:
           PORT: ${{ secrets.PORT }}
           DEBUG: ${{ secrets.DEBUG }}
+          API_SYNC_URL: ${{ secrets.API_SYNC_URL }}

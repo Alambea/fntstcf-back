@@ -18,6 +18,7 @@ const ervinMock: UserWithoutId = {
 export const usersMock: UserStructure[] = [
   {
     ...leanneMock,
+    externalId: "1",
     _id: "659730dc918836cd309acda2",
   },
   {

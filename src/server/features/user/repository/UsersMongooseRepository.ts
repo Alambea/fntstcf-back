@@ -25,6 +25,7 @@ class UsersMongooseRepository implements UsersRepository {
     const options: QueryOptions = {
       returnDocument: "after",
     };
+
     const updatedUser = await User.findOneAndUpdate(filter, user, options);
 
     if (updatedUser) {

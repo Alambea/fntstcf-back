@@ -14,7 +14,7 @@ const UserSchema = new Schema<UserStructure>({
     type: String,
     required: true,
   },
-  externalId: {
+  external_id: {
     type: String,
     required: false,
     sparse: true,

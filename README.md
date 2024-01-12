@@ -40,7 +40,7 @@ Content-Type: application/json
       "name": "Leanne Graham",
       "username": "Bret",
       "email": "Sincere@april.biz",
-      "externalId": "1",
+      "external_id": "1",
       "address": "Gwenborough Kulas Light, Apt. 556, 92998-3874",
     },
     {
@@ -48,7 +48,7 @@ Content-Type: application/json
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
-      "externalId": "2",
+      "external_id": "2",
       "address": "Wisokyburgh Victor Plains, Suite 879, 90566-7771",
     },
   // ... more users
@@ -77,7 +77,7 @@ Content-Type: application/json
   "name": "Ervin Howell",
   "username": "Antonette",
   "email": "Shanna@melissa.tv",
-  "externalId": "2",
+  "external_id": "2",
   "address": "Wisokyburgh Victor Plains, Suite 879, 90566-7771",
 },
 ```
@@ -97,7 +97,7 @@ Content-Type: application/json
     "name": "Ervin Howell",
     "username": "Antonette",
     "email": "Shanna@melissa.tv",
-    "externalId": "2",
+    "external_id": "2",
     "address": "Wisokyburgh Victor Plains, Suite 879, 90566-7771",
   },
 }
@@ -135,7 +135,7 @@ Content-Type: application/json
       "name": "Leanne Graham",
       "username": "Bret",
       "email": "Sincere@april.biz",
-      "externalId": "1",
+      "external_id": "1",
       "address": "Gwenborough Kulas Light, Apt. 556, 92998-3874",
     },
     {
@@ -143,7 +143,7 @@ Content-Type: application/json
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
-      "externalId": "2",
+      "external_id": "2",
       "address": "Wisokyburgh Victor Plains, Suite 879, 90566-7771",
     },
   // ... more users

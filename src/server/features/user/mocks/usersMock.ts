@@ -1,6 +1,6 @@
 import { type UserWithoutId, type UserStructure } from "../../types";
 
-export const leanneMock: Omit<UserWithoutId, "externalId"> = {
+export const leanneMock: Omit<UserWithoutId, "external_id"> = {
   name: "Leanne Graham",
   username: "Bret",
   email: "Sincere@april.biz",
@@ -11,14 +11,16 @@ export const ervinMock: UserWithoutId = {
   name: "Ervin Howell",
   username: "Antonette",
   email: "Shanna@melissa.tv",
-  externalId: "2",
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  external_id: "2",
   address: "Wisokyburgh Victor Plains, Suite 879, 90566-7771",
 };
 
 export const usersMock: UserStructure[] = [
   {
     ...leanneMock,
-    externalId: "1",
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    external_id: "1",
     _id: "659730dc918836cd309acda2",
   },
   {

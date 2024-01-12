@@ -20,7 +20,8 @@ class UsersMongooseRepository implements UsersRepository {
 
   public async updateUser(user: UserWithoutId): Promise<UserStructure | void> {
     const filter: FilterQuery<any> = {
-      externalId: user.externalId,
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      external_id: user.external_id,
     };
     const options: QueryOptions = {
       returnDocument: "after",
